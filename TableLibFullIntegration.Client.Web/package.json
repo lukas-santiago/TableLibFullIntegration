@@ -1,0 +1,21 @@
+{
+  "name": "tablelibfullintegration.client.web",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/compressor-brotli": "^2.7.0",
+    "@parcel/compressor-gzip": "^2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "datatables.net": "^1.12.1",
+    "datatables.net-dt": "^1.12.1",
+    "jquery": "^3.6.1"
+  }
+}
