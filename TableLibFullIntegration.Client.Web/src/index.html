@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table Library Full Integration</title>
-    <link rel="stylesheet" href="assets/scss/main.scss" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <table id="example" class="table table-responsive" style="width: 100%">
-            <thead class="text-nowrap">
-              <tr>
-                <th>Customer #</th>
-                <th>Name </th>
-                <th>Contact Last Name</th>
-                <th>Contact First Name</th>
-                <th>Phone Date</th>
-                <th>Address Line 1</th>
-                <th>Address Line 2</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Postal Code</th>
-                <th>Country</th>
-                <th>Sales Rep Employee Number</th>
-                <th>Credit Limit</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Table Library Full Integration</title>
+  <link rel="stylesheet" href="assets/scss/main.scss" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex" style="min-height: 100vh;">
+        <table id="example" class="table table-responsive w-100" style="width: 100%">
+          <thead>
+            <tr class="text-nowrap">
+              <th>Customer #</th>
+              <th>Name </th>
+              <th>Contact Last Name</th>
+              <th>Contact First Name</th>
+              <th>Phone Date</th>
+              <th>Address Line 1</th>
+              <th>Address Line 2</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Postal Code</th>
+              <th>Country</th>
+              <th>Sales Rep Employee Number</th>
+              <th>Credit Limit</th>
+            </tr>
+          </thead>
+          <tbody class="text-nowrap"></tbody>
+        </table>
       </div>
     </div>
-    <script type="module" src="assets/js/main.js"></script>
-  </body>
+  </div>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
 </html>

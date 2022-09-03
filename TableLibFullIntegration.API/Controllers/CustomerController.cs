@@ -9,6 +9,7 @@ using Dapper;
 using System.Text.Json;
 using SqlKata.Compilers;
 using SqlKata;
+using TableLibFullIntegration.API.Utils;
 
 namespace TableLibFullIntegration.API.Controllers;
 
@@ -16,9 +17,15 @@ namespace TableLibFullIntegration.API.Controllers;
 [Route("api/[controller]")]
 public class CustomerController : ControllerBase
 {
+    private readonly IDatabaseConnection connection;
+
+    public CustomerController(IDatabaseConnection connection)
+    {
+        this.connection = connection;
+    }
 
     [HttpPost("/")]
-    public ActionResult getCustomers()
+    public ActionResult GetCustomers()
     {
         string json = Request.Form.Keys.First();
         var options = new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
@@ -28,14 +35,14 @@ public class CustomerController : ControllerBase
         {
             //SqlKata Aprouch
             var compiler = new MySqlCompiler();
-            
+
             string table = "customers";
 
             var sqlBuild = new Query(table);
             var sqlBuildCount = new Query(table);
 
             // Filtering
-            if (String.IsNullOrEmpty(request?.Search.Value) == false)
+            if (!String.IsNullOrEmpty(request?.Search.Value))
             {
                 request.Columns.ForEach(column =>
                 {
@@ -88,10 +95,6 @@ public class CustomerController : ControllerBase
     [HttpGet]
     public ActionResult get()
     {
-
-
-        var connection = new MySqlConnection("Host=localhost;Port=3306;User=user;Password=secret;Database=Users;SslMode=None");
-
         var compiler = new MySqlCompiler();
 
         var query = "SELECT  * FROM customers;";

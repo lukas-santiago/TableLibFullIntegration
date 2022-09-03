@@ -14,6 +14,7 @@ $(document).ready(function () {
         orderMulti: true,
         processing: true,
         scrollX: true,
+        responsive: true,
         ajax: {
             url: 'https://localhost:7259/',
             type: 'POST',

@@ -1,14 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableLibFullIntegration.API", "TableLibFullIntegration.API\TableLibFullIntegration.API.csproj", "{970B3B32-F7A4-4028-BA26-C806D8B575AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{970B3B32-F7A4-4028-BA26-C806D8B575AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970B3B32-F7A4-4028-BA26-C806D8B575AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970B3B32-F7A4-4028-BA26-C806D8B575AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970B3B32-F7A4-4028-BA26-C806D8B575AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1586BE4-933D-492F-B611-91F4000B1E10}
 	EndGlobalSection
 EndGlobal
