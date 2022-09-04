@@ -1,4 +1,6 @@
-using TableLibFullIntegration.API.Utils;
+using System.Data;
+using System.Data.Common;
+using MySql.Data.MySqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -15,9 +17,10 @@ var builder = WebApplication.CreateBuilder(args);
         .AllowAnyHeader();
     }));
 
-    // builder.Configuration.GetConnectionString("DefaultConnection");
-    builder.Services.AddScoped<IConnectionConfiguration, ConnectionConfiguration>();
-    builder.Services.AddScoped<IDatabaseConnection, MySQLDatabaseConnection>();
+    {    // Setting Up Data Source        
+        string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+        builder.Services.AddTransient<DbConnection>(s => new MySqlConnection(connectionString));
+    }
 }
 
 var app = builder.Build();

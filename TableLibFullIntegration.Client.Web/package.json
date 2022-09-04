@@ -16,6 +16,8 @@
     "bootstrap": "^5.2.0",
     "datatables.net": "^1.12.1",
     "datatables.net-dt": "^1.12.1",
-    "jquery": "^3.6.1"
+    "jquery": "^3.6.1",
+    "remixicon": "^2.5.0",
+    "scrollreveal": "^4.0.9"
   }
 }

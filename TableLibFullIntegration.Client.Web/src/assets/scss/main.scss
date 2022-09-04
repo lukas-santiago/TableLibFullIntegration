@@ -1,3 +1,11 @@
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
 @import "../../../node_modules/datatables.net-dt/css/jquery.dataTables.min.css";
+@import '../../../node_modules/remixicon/fonts/remixicon.css';
+
+$navbar-dark-color: rgba($white, .55);
+$navbar-light-color: rgba($white, .55);
+
+.navbar {
+    --bs-navbar-toggler-border-radius: 0.2rem;
+}

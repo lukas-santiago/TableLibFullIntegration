@@ -1,13 +1,16 @@
-// Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
-import jQuery from 'jquery';
-// export for others scripts to use
-window.$ = jQuery;
+import jQuery from 'jquery'; window.$ = jQuery;
 
+import * as bootstrap from 'bootstrap'
+import ScrollReveal from 'scrollreveal';
 import dt from "datatables.net";
 var dt = dt(window, $);
 
-$(document).ready(function () {
+ScrollReveal().reveal('.ScrollReveal-1', {
+    delay: 500,
+    distance: '5px',
+});
+
+$(function () {
     $('#example').DataTable({
         serverSide: true,
         ordering: true,
@@ -45,4 +48,6 @@ $(document).ready(function () {
             { data: 'creditLimit' },
         ],
     });
+
+    $('.ScrollReveal-1').removeClass('invisible');
 });
